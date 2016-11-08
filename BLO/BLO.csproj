@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{829F0967-421C-406D-BDFA-28C3B571BF05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLO</RootNamespace>
+    <AssemblyName>BLO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="dbo\MediFast.dbo.Procedures.cs" />
+    <Compile Include="dbo\MediFast.dbo.Tables.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_CASEMONTHLY.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_BANKBRANCH.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_EVENTLOG.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_POLICYTYPE.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_FORM.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.V_CLIENTCASEACTION.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_MEDICALTESTREQUIREMENT.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_CLIENTMESSAGE.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_BANKINFO.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_CLIENTCASE.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_PANELDOCTOR.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_COMPANY.cs" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_USER.cs" />
+    <Compile Include="HTML\ContactUs.cs" />
+    <Compile Include="HTML\InformStatusChanged.cs" />
+    <Compile Include="HTML\ResetEmail.cs" />
+    <Compile Include="Interfaces\IAttributeBase.cs" />
+    <Compile Include="Interfaces\IBaseAdminReport.cs" />
+    <Compile Include="Managers\AddressManager.cs" />
+    <Compile Include="Managers\BundleManager.cs" />
+    <Compile Include="Managers\CaptchaManager.cs" />
+    <Compile Include="Managers\EmailManager.cs" />
+    <Compile Include="Managers\EventLogManager.cs" />
+    <Compile Include="Managers\E_TableManager.cs" />
+    <Compile Include="Managers\ImageManager.cs" />
+    <Compile Include="Managers\IPManager.cs" />
+    <Compile Include="Managers\MD5Manager.cs" />
+    <Compile Include="Managers\MediFastManager.cs" />
+    <Compile Include="Managers\UrlManager.cs" />
+    <Compile Include="Objects\AppSettings.cs" />
+    <Compile Include="Objects\BaseAdminReport.cs" />
+    <Compile Include="Objects\BLOListReport.cs" />
+    <Compile Include="Objects\BLOObject.cs" />
+    <Compile Include="Objects\EmailSetting.cs" />
+    <Compile Include="Objects\Enums\ImageFolder.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_BANK.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_CASESTATUS.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_COMPANYTYPE.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_COUNTRY.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_EVENTLOGTYPE.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_INSURERCASESTATUS.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_PANELTYPE.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_STATE.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_TESTREQUIREMENTCATEGORY.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_TITLE.cs" />
+    <Compile Include="Objects\Enums\SortByEnum.cs" />
+    <Compile Include="Objects\Enums\MediFast\Enum_USERROLE.cs" />
+    <Compile Include="Objects\FacebookObject.cs" />
+    <Compile Include="Objects\MedicalTestRequirementInfo.cs" />
+    <Compile Include="Objects\RegisterInfo.cs" />
+    <Compile Include="Objects\UserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Default.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Default.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBO.Data\DBO.Data.csproj">
+      <Project>{366BE1E0-3702-48B8-9785-376DF9C40325}</Project>
+      <Name>DBO.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTMLReportCreator\HTMLReportCreator.csproj">
+      <Project>{563E1154-AD9F-4389-8417-EA6173A12459}</Project>
+      <Name>HTMLReportCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.Control\MVC.Control.csproj">
+      <Project>{495D52DD-AF94-42FB-B0CE-69CF725EDBD0}</Project>
+      <Name>MVC.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportListing\ReportListing.csproj">
+      <Project>{451BAE2B-EE7E-4F47-80B7-4DB661CD0760}</Project>
+      <Name>ReportListing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="dbo\partials\MediFast.dbo.T_CLIENTMEDICALTESTREQUIREMENT.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Default.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Default.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
